@@ -4,6 +4,81 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson 3 - Table, các thẻ con</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 60%;
+        margin: auto;
+      }
+
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+
+      th,
+      td {
+        text-align: center;
+        padding: 8px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <!-- Table -->
+    <table>
+      <tr>
+        <th>STT</th>
+        <th>Năm sinh</th>
+        <th>Vị trí</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2004</td>
+        <td>Hà Nội</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2001</td>
+        <td>Hải Phòng</td>
+      </tr>
+    </table>
+
+    <br />
+    <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Tên</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+    </table>
+
+    <br />
+    <br />
+
+    <!-- Gộp ô colspan, rowspan -->
+    <table border="2">
+      <!-- border sử dụng để bo viền bảng -->
+      <tr>
+        <th colspan="2">Tên</th>
+        <!-- colspan là hàng ngang -->
+        <th rowspan="2">Tuổi</th>
+        <!-- rowspan là hàng dọc -->
+      </tr>
+      <tr>
+        <td>Dương</td>
+        <td>Đức</td>
+        <td>21</td>
+      </tr>
+      <tr>
+        <td>Anh</td>
+        <td>Nga</td>
+        <td>23</td>
+      </tr>
+    </table>
+  </body>
 </html>
