@@ -46,3 +46,17 @@
 - Sử dụng thẻ div khi phân chia bố cục layout khi cần đúng ngữ nghĩa, chỉ only yêu cầu đúng kĩ thuật là được
 - Còn sử dụng thẻ section khi mỗi section sẽ có nội dung riêng biệt và có tiêu đề
 - Thuộc tính display: flex; được sử dụng để tạo layout dàn ngang ra, còn display: flex + flex-direction: column-reverse; hoặc flex-direction: column; để tạo layout nằm dọc
+
+--> Lesson 5: CSS: color, font-family, text-align, margin, padding
+
+- Phần GG Fonts bắt buộc phải gán link trên thẻ head thì mới có thể sử dụng tên font chữ trong css
+- Thuộc tính background-color được sử dụng để nổi màu nền
+- Thuộc tính color được sử dụng để đổi màu chữ
+- Thuộc tính padding là khoảng cách từ nội dung tới viền
+- Thuộc tính margin là khoảng cách bên ngoài nội dung
+- Thuộc tính text-align để điều chỉnh chữ sang các hướng như trái phải hoặc ở giữa,...
+
+--> Lesson 6: Border, position, các thuộc tính center
+
+- Thuộc tính border và border-radius: giúp cho khung trở nên đẹp hơn có thể chỉnh độ dày màu sắc và độ bo góc của viền theo kích thước
+- position: relative, vị trí của nó dựa trên chính nó, nhưng vẫn chiếm chỗ như cũ, dù thay đổi như nào thì phần tử bên trong vẫn không thay đổi gì
