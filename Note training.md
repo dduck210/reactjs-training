@@ -76,6 +76,9 @@
 - sử dụng media query giúp cho việc responsive web trên nhiều thiết bị như desktop, tablet, mobile
 - Desktop-first sẽ sử dụng max-width để đảm bảo logic sẽ được triển khai giao diện màn hình từ lớn đến nhỏ
 - còn mobile-first sẽ sử dụng min-width để logic sẽ triển khai từ giao diện màn hình từ nhỏ đến lớn
-- Kích thước 1024px cho giao diện desktop, 768px cho tablet, mobile là 480px
+- Mobile nhỏ ≤ 480px @media (max-width: 480px)
+- Mobile lớn ≤ 768px @media (max-width: 768px)
+- Tablet ≤ 1024px @media (max-width: 1024px)
+- Desktop > 1024px không cần media query (mặc định)
 - Không nên đặt chung min-width và max-width để tránh nhầm lẫn và xung đột
 - Nếu trong 1 đoạn style css code min-width 1024px sẽ là mobile-first, còn max-width sẽ là desktop-first
