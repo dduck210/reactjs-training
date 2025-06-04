@@ -83,7 +83,77 @@ console.log("Số dư:", phepChiaLayDu);
 let name2 = "Đức";
 
 // Hiển thị thông báo popup trên trình duyệt (người dùng sẽ thấy đc)
-alert("Xin chào " + name2);
+// alert("Xin chào " + name2);
 
 // Ghi thông tin vào bảng điều khiển (người dùng sẽ k thấy đc, chỉ dev mới có thể thấy)
 console.log("Tên người dùng là:", name2);
+
+null == undefined;
+console.log(null == undefined);
+
+// So sánh == và ===
+"5" == 5; // true vì '5' được chuyển thành số 5
+true == 1; // true vì true được chuyển thành 1
+false == 0; // true vì false được chuyển thành 0
+null == undefined; // true
+console.log("5" == 5);
+console.log(true == 1);
+console.log(false == 0);
+console.log(null == undefined);
+// end ==
+
+// ===
+"5" === 5; // false vì '5' là chuỗi, 5 là type number
+true === 1; // false vì true là boolean, 1 là type number
+true === true; // true vì cả hai đều là boolean
+5 === 5; // true vì cả hai đều là number
+console.log("5" === 5);
+console.log(true === 1);
+console.log(true === true);
+console.log(5 === 5);
+
+// tạo hàm function truyền thống
+function tenHam(thamSo1, thamSo2, thamSo3) {
+  return giaTriTraVe;
+}
+console.log(tenHam(1, 2, 3));
+
+// ví dụ về tạo hàm function truyền thống
+// đây cũng là hàm có tham số có trả về
+function tinhTong(a, b) {
+  return a + b;
+}
+
+let tong = tinhTong(6, 9);
+console.log("Tổng là:", tong);
+
+// hàm k có tham số truyền vào, không return giá trị
+function chaoBan() {
+  console.log("Xin chào bạn Đức");
+}
+chaoBan();
+
+// hàm có tham số truyền vào, không return giá trị
+function xinChaoTen(ten) {
+  console.log("Xin chào " + ten);
+}
+xinChaoTen("Đức");
+
+// arrow function có cú pháp như sau
+const tenHam = (thamSo1, thamSo2) => {
+  return giaTri;
+};
+
+// ví dụ về arrow function
+
+// hàm k có tham số có trả về
+const chaoBan1 = () => {
+  console.log("Heslo Đức");
+};
+chaoBan1();
+
+// hàm có tham số có trả về
+const tinhTong1 = (a, b) => {
+  return a + b;
+};
+console.log(tinhTong1(3, 4));

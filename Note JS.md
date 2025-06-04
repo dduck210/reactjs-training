@@ -17,3 +17,21 @@
 - type of (check kiểu dữ liệu) giả sử gán giá trị là 25 thì type sẽ là number, gán value là "Đức" thì sẽ là type string
 - kiểu dữ liệu array (mảng) là kiểu dữ liệu được sử dụng để viết nhiều giá trị theo thứ tự, dùng dấu [], chứa các phần tử phân cách bằng dấu phẩy
 - Cách phân biệt alert, console.log giả sử `alert("Xin chào " + name2);` sẽ hiển thị thông báo popup trên trình duyệt (người dùng sẽ thấy đc). Còn `console.log("Tên người dùng là:", name2);` thì thường đc dev sử dụng vào việc debug, ng dùng sẽ k thể thấy đc, chỉ có dev mới nhìn thấy
+- toán tử so sánh == được sử dụng khi so sánh bằng, so sánh value, thì sẽ trả về true
+- toán tử so sánh === được sử dụng khi so sánh chính xác tuyệt đối cả value cả type, tất cả sẽ trả về false nếu như so sánh sai kiểu type và value, chỉ trả về true đúng đúng kiểu type và value
+
+--> Lesson 2: Function, Callback, Arrow Function
+
+// Note Function
+
+- hàm k thể tự run đc mà bắt buộc phải gọi nó ra bằng console.log();
+- nếu như muốn lấy giá trị thì phải return
+- nếu như truyền thiếu tham số thì hàm sẽ trả về undefined
+
+// Note Arrow Function
+
+- Arrow function có cú pháp const tenHam = (a, b) => {} tenHam(1, 2) khác biệt so với function truyền thống là k có `=> {}`
+  function tenHam(thamSo1, thamSo2, thamSo3) {
+  return giaTriTraVe;
+  }
+  console.log(tenHam(1, 2, 3));
