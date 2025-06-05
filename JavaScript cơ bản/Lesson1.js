@@ -113,10 +113,10 @@ console.log(true === true);
 console.log(5 === 5);
 
 // tạo hàm function truyền thống
-function tenHam(thamSo1, thamSo2, thamSo3) {
-  return giaTriTraVe;
-}
-console.log(tenHam(1, 2, 3));
+// function tenHam(thamSo1, thamSo2, thamSo3) {
+//   return giaTriTraVe;
+// }
+// console.log(tenHam(1, 2, 3));
 
 // ví dụ về tạo hàm function truyền thống
 // đây cũng là hàm có tham số có trả về
@@ -140,7 +140,7 @@ function xinChaoTen(ten) {
 xinChaoTen("Đức");
 
 // arrow function có cú pháp như sau
-const tenHam = (thamSo1, thamSo2) => {
+const tenHam1 = (thamSo1, thamSo2) => {
   return giaTri;
 };
 
@@ -157,3 +157,40 @@ const tinhTong1 = (a, b) => {
   return a + b;
 };
 console.log(tinhTong1(3, 4));
+
+const person2 = {
+  name: "Duong",
+  sayHi: () => {
+    const name = [1, 2, 4, "áddsdas"]; // Biến name trong phạm vi hàm sayHi
+    console.log("Hi, I'm " + name);
+  },
+};
+person2.sayHi();
+
+// this trong arrow function sẽ không trỏ đến đối tượng chứa nó, mà sẽ trỏ đến phạm vi bên ngoài của nó.
+const car = () => {
+  const name = "Merc";
+  console.log("This is a car " + name);
+};
+car();
+
+// this trong function truyền thống
+const person3 = {
+  name: "Duc",
+  sayHi: function () {
+    console.log("Hi, I'm " + this.name);
+  },
+};
+person3.sayHi();
+
+// callback function là hàm được truyền vào như một tham số cho hàm khác và sẽ được gọi lại trong hàm đó.
+// Hàm tính tổng và dùng callback để in ra kết quả
+function tinhTong(a, b, callback) {
+  const tong = a + b;
+  callback(tong); // gọi lại hàm in kết quả
+}
+
+// Gọi hàm và truyền vào một hàm in kết quả
+tinhTong(5, 3, function (ketQua) {
+  console.log("Kết quả là:", ketQua);
+});

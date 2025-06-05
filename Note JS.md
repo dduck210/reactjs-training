@@ -30,8 +30,27 @@
 
 // Note Arrow Function
 
-- Arrow function có cú pháp const tenHam = (a, b) => {} tenHam(1, 2) khác biệt so với function truyền thống là k có `=> {}`
+- Arrow function có cú pháp const tenHam = (a, b) => {} tenHam(1, 2) khác biệt so với function truyền thống là k có `=> {}`, đây là cú pháp
   function tenHam(thamSo1, thamSo2, thamSo3) {
   return giaTriTraVe;
   }
   console.log(tenHam(1, 2, 3));
+- Hàm k có tham số trả về có cú pháp là:
+  const tenHam = (k truyen tham so) => {
+  console.log("");
+  };
+  tenHam();
+- Hàm có tham số trả về có cú pháp là:
+  const tenHam = (truyen vao tham so) => {
+  return tham so;
+  };
+  console.log(tenHam(thamso));
+- `const person2 = {
+name: "Duong",
+sayHi: function () {
+console.log("Hi, I'm " + this.name);
+},
+};
+person2.sayHi();`
+  Ở trong ví dụ trên thì this sẽ trỏ về đối tượng gọi nó là person2
+- Trong hàm function truyền thống thì sẽ sử dụng dụng this để gọi ra tên biến, còn trong hàm arrow function thì không thể sử dụng this để gọi tên hàm được mà sẽ sử dụng dấu arrow function là `= () {}` rồi sau đó sẽ log ra + tên biến, cuối cùng thì gọi tenHam(); ra

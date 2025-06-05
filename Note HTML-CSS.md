@@ -46,3 +46,25 @@
 - Sử dụng thẻ div khi phân chia bố cục layout khi cần đúng ngữ nghĩa, chỉ only yêu cầu đúng kĩ thuật là được
 - Còn sử dụng thẻ section khi mỗi section sẽ có nội dung riêng biệt và có tiêu đề
 - Thuộc tính display: flex; được sử dụng để tạo layout dàn ngang ra, còn display: flex + flex-direction: column-reverse; hoặc flex-direction: column; để tạo layout nằm dọc
+
+--> Lesson 5: CSS: color, font-family, text-align, margin, padding
+
+Phần GG Fonts bắt buộc phải gán link trên thẻ head thì mới có thể sử dụng tên font chữ trong css
+Thuộc tính background-color được sử dụng để nổi màu nền
+Thuộc tính color được sử dụng để đổi màu chữ
+Thuộc tính padding là khoảng cách từ nội dung tới viền
+Thuộc tính margin là khoảng cách bên ngoài nội dung
+Thuộc tính text-align để điều chỉnh chữ sang các hướng như trái phải hoặc ở giữa,...
+
+--> Lesson 6: Border, position, các thuộc tính center
+
+Thuộc tính border và border-radius: giúp cho khung trở nên đẹp hơn có thể chỉnh độ dày màu sắc và độ bo góc của viền theo kích thước
+position: relative là phần cha bọc absolute, absolute cũng sẽ không thay đổi vị trí của nó khi relative không di chuyển, khi relative di chuyển thì absulute cũng di chuyển theo theo nhưng không fix cứng theo scroll màn hình
+position: fixed sẽ fix cứng theo scroll màn hình
+Thuộc tính display: flex; để dàn trang, kết hợp với thuộc tính flex-direction: row là ngang column là dọc
+display: flex + align-items: center không thể căn ngang được vì 2 thuộc tính này sử dụng cho căn dọc items
+Thuộc tính position + transform được sử dụng để căn ngang item
+position: absolute; đưa ra khỏi vùng đó và có thể chỉnh sửa vị trí bằng thuộc tính top, left, right, bottom
+Thuộc tính left đặt là 50% đặt ở bên trái của class box
+Thuộc tính transform: translateX(-50%); đẩy phần tử ngược lại 50% chiều rộng của màn hình được tính theo tỉ lệ 100%, nếu là chiều dọc thì sẽ là translateY(-50%)
+Với position thì nếu là ngang thì sẽ sử dụng right hoặc left để chỉnh sao cho nó vào giữa kết hợp với transformX, còn dọc thì sẽ sử dụng top hoặc bottom kết hợp với transformY
