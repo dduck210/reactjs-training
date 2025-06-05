@@ -68,3 +68,18 @@ position: absolute; đưa ra khỏi vùng đó và có thể chỉnh sửa vị 
 Thuộc tính left đặt là 50% đặt ở bên trái của class box
 Thuộc tính transform: translateX(-50%); đẩy phần tử ngược lại 50% chiều rộng của màn hình được tính theo tỉ lệ 100%, nếu là chiều dọc thì sẽ là translateY(-50%)
 Với position thì nếu là ngang thì sẽ sử dụng right hoặc left để chỉnh sao cho nó vào giữa kết hợp với transformX, còn dọc thì sẽ sử dụng top hoặc bottom kết hợp với transformY
+
+--> Lesson 7: media query, responsive, các size responsive
+
+- max-width được sử dụng khi chiều rộng bé hơn hoặc bằng chiều dài
+- min-width được sử dụng khi chiều rộng lớn hơn hoặc bằng chiều dài
+- sử dụng media query giúp cho việc responsive web trên nhiều thiết bị như desktop, tablet, mobile
+- Desktop-first sẽ sử dụng max-width để đảm bảo logic sẽ được triển khai giao diện màn hình từ lớn đến nhỏ
+- còn mobile-first sẽ sử dụng min-width để logic sẽ triển khai từ giao diện màn hình từ nhỏ đến lớn
+- Kích thước 1024px cho giao diện desktop, 768px cho tablet, mobile là 480px
+- Không nên đặt chung min-width và max-width để tránh nhầm lẫn và xung đột
+- Nếu trong 1 đoạn style css code min-width 1024px sẽ là mobile-first, còn max-width sẽ là desktop-first
+- Mobile nhỏ ≤ 480px @media (max-width: 480px)
+- Mobile lớn ≤ 768px @media (max-width: 768px)
+- Tablet ≤ 1024px @media (max-width: 1024px)
+- Desktop > 1024px không cần media query (mặc định)
