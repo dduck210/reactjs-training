@@ -54,3 +54,25 @@ console.log("Hi, I'm " + this.name);
 person2.sayHi();`
   Ở trong ví dụ trên thì this sẽ trỏ về đối tượng gọi nó là person2
 - Trong hàm function truyền thống thì sẽ sử dụng dụng this để gọi ra tên biến, còn trong hàm arrow function thì không thể sử dụng this để gọi tên hàm được mà sẽ sử dụng dấu arrow function là `= () {}` rồi sau đó sẽ log ra + tên biến, cuối cùng thì gọi tenHam(); ra
+- Hàm callback là 1 hàm có thể run sau khi 1 hàm khác đã hoàn thành
+- sau khi khai báo biến có thể callback gọi cái tổng ra để tính toán và setTimeout cho nó thời gian sau đó tạo hàm in ra kết quả ví dụ `tinhTong(10, 20, inKetQua)`, như ví dụ thì kết quả sẽ in ra tổng = 15
+- Ngoài ra cũng có thể sử dụng arrow function để làm callback ví dụ
+  `tinhTong(7, 3, (kq) => {
+  console.log("Kết quả là:", kq);
+});`
+  kết quả sẽ in ra là 7 + 3 = 10, callback(10) chính là gọi (kq), hàm callback chính là đoạn `(kq) => { }`
+
+--> Lesson 3 -
+
+- .map() là một hàm dùng để duyệt qua từng phần tử của mảng
+- Nó tạo ra một mảng mới từ kết quả của mỗi lần duyệt
+- K làm thay đổi mảng ban đầu
+<!-- - Cấu trúc cơ bản:
+    array.map(function(phầnTử, chỉSố, mảngGốc) { ... })
+- Dùng khi bạn muốn "biến đổi" từng phần tử trong mảng thành một giá trị mới -->
+- Dùng return để trả về giá trị mới cho từng phần tử
+- `map();` có thể dùng arrow function, duyệt đc mảng object, nhân đôi mảng mỗi phần tử
+- filter() sử dụng để duyệt qua mảng và giữ lại các phần tử đúng điều kiện
+- number % 2 === 0 Kiểm tra số đó có chia hết cho 2 thì sẽ là số chẵn
+- => Cách viết hàm ngắn gọn (arrow function)
+  ví dụ `const soLe = nhieuSo1.filter((so1) => so1 % 2 !== 0);`
