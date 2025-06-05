@@ -7,211 +7,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="styles.css" />
     <title>Practice HTML-CSS</title>
-    <style>
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      /* body {
-        font-family: Arial, sans-serif;
-      } */
-
-      .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-        text-align: center;
-        gap: 850px;
-      }
-
-      .nav-links {
-        display: flex;
-        margin-left: 100px;
-        align-items: center;
-        gap: 20px;
-      }
-
-      .nav-links a {
-        text-decoration: none;
-        color: black;
-      }
-
-      .nav-button {
-        padding: 10px 16px;
-        background-color: black;
-        color: white;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-      }
-
-      .container {
-        max-width: 1280px;
-        margin: auto;
-        padding: 20px;
-      }
-
-      .about-section {
-        display: flex;
-        flex-wrap: wrap;
-        margin-bottom: 20px;
-        gap: 40px;
-      }
-
-      .about-text {
-        max-width: 624px;
-      }
-
-      .about-text h1 {
-        font-size: 2.5em;
-        margin-bottom: 24px;
-      }
-
-      .subheading {
-        color: #828282;
-        margin-bottom: 24px;
-      }
-
-      .about-image {
-        max-width: 508px;
-      }
-
-      .about-image img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-      }
-
-      .contact-section {
-        margin-bottom: 60px;
-        width: 600px;
-        height: 448px;
-        margin-top: 0px;
-      }
-
-      .contact-section h2 {
-        /* font-size: 2em; */
-        margin-bottom: 24px;
-      }
-
-      .contact-form {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .form-row {
-        display: flex;
-        gap: 20px;
-      }
-
-      .form-group {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-      }
-
-      label {
-        font-weight: 500;
-        margin-bottom: 8px;
-      }
-
-      input,
-      textarea {
-        padding: 14px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        font-size: 1em;
-        width: 100%;
-      }
-
-      textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
-
-      .contact-form button {
-        background-color: black;
-        color: white;
-        padding: 16px;
-        border: none;
-        font-size: 1em;
-        font-weight: 500;
-        border-radius: 10px;
-        cursor: pointer;
-      }
-
-      /* .contact-form button:hover {
-        background-color: white;
-      } */
-
-      footer {
-        background-color: #f8f8f8;
-        padding: 60px 20px;
-        font-family: Arial, sans-serif;
-        color: #333;
-        border-top: 1px solid #ddd;
-      }
-
-      .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-        flex-wrap: wrap;
-      }
-
-      .footer-top .site-name {
-        font-size: 1.5em;
-        font-weight: bold;
-      }
-
-      .social-icons {
-        display: flex;
-        gap: 16px;
-        font-size: 1.4em;
-      }
-
-      .social-icons i {
-        color: #333;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-
-      .social-icons i:hover {
-        color: #007bff;
-      }
-
-      .footer-bottom {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 40px;
-      }
-
-      .footer-column {
-        min-width: 150px;
-      }
-
-      .footer-column p:first-child {
-        font-weight: bold;
-        margin-bottom: 12px;
-      }
-
-      .footer-column p {
-        margin: 6px 0;
-        cursor: pointer;
-        transition: color 0.3s;
-      }
-
-      .footer-column p:hover {
-        color: #007bff;
-      }
-    </style>
   </head>
   <body>
     <header class="navbar">
@@ -281,22 +78,25 @@
           </section>
         </div>
         <div class="about-image">
-          <img src="/Image.png" alt="Image" />
+          <img src="./image/image.png" alt="Image" />
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <div class="footer-top">
-        <div class="site-name">Site name</div>
-        <div class="social-icons">
-          <i class="fa-brands fa-facebook"></i>
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-youtube"></i>
-          <i class="fa-brands fa-instagram"></i>
+      <div class="footer-container">
+        <div class="footer-left">
+          <h2 class="site-name">Site name</div>
+             <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
         </div>
+       
       </div>
-      <div class="footer-bottom">
+      <div class="footer-columns">
         <div class="footer-column">
           <p><strong>Topic</strong></p>
           <p>Page</p>
