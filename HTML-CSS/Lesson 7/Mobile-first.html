@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lesson 7 - media query, responsive, các size responsive</title>
+    <style>
+      .banner {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Mobile-first */
+      .box {
+        background-color: red;
+        color: white;
+        padding: 20px;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      /* Tablet trở lên (>= 480px) */
+      @media (min-width: 480px) {
+        .box {
+          background-color: green;
+          font-size: 16px;
+        }
+      }
+
+      /* Laptop trở lên (>= 768px) */
+      @media (min-width: 768px) {
+        .box {
+          background-color: orange;
+          font-size: 18px;
+        }
+      }
+
+      /* Desktop trở lên (>= 1024px) */
+      @media (min-width: 1024px) {
+        .box {
+          background-color: blue;
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      class="banner"
+      src="https://picsum.photos/1200/400"
+      alt="Banner giày"
+    />
+
+    <div class="box">Ở đây chúng tôi bán giày chất lượng thấp !</div>
+  </body>
+</html>
