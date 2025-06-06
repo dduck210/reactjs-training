@@ -40,16 +40,25 @@ console.log(soLe);
 // done lọc số chẵn và số lẻ
 // Lọc sinh viên trên 22 tuổi
 const nhieuSinhVien1 = [
-  { ten: "Đức", tuoi: 22 },
-  { ten: "Dương", tuoi: 21 },
+  { ten: "Đức", tuoi: 4 },
+  { ten: "Dương", tuoi: 5 },
   { ten: "Anh", tuoi: 23 },
   { ten: "Hà", tuoi: 24 },
-  { ten: "Hùng", tuoi: 20 },
+  { ten: "Hùng", tuoi: 7 },
   { ten: "Hải", tuoi: 25 },
   { ten: "Hà", tuoi: 26 },
 ];
 const sinhVienTren22Tuoi = nhieuSinhVien1.filter(
   (sinhVien) => sinhVien.tuoi > 22
 );
+
+const thongTinSinhVien = nhieuSinhVien1.map((nhieuSinhVien1) => {
+  return {
+    ten: nhieuSinhVien1.ten,
+    tuoi: nhieuSinhVien1.tuoi + 2,
+  };
+});
 console.log(sinhVienTren22Tuoi);
+console.log(thongTinSinhVien);
+
 // done lọc sinh viên trên 22 tuổi

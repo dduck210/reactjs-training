@@ -91,3 +91,8 @@ if (time > 8) {
   => khai báo biến time = 9, câu if đầu tiên là set time > 8, mà 9 thì hiển nhiên lớn hơn 8 nên câu điều kiện sẽ chạy đến hết câu if là xong, nghĩa là check-in muộn, còn ngược lại giả sử set time = 7, câu if đầu tiên set time > 8, thì 7 chắc chắn sẽ nhỏ hơn 8 nên khi chạy hết câu điều kiện if đầu tiên báo sai (false) thì chương trình sẽ chạy xuống else (ở đây else k có condition gì có nghĩa là tất cả các trường hợp còn lại miễn là > 8 thì sẽ là check-in đúng giờ)
 - if-else if-else (câu điều kiện đa nhánh) kiểm tra được nhiều condition, chương trình sẽ dừng tại nhánh đúng đầu tiên, các nhánh sau sẽ bị bỏ qua
   => - if là câu điều kiện đơn, - if-else là câu điều kiện 2 nhánh, if-else if-else là câu điều kiện đa nhánh
+- switch case sẽ chạy từ case đầu tiên đến case cuối cùng, mỗi case sẽ có 1 `break` và cứ chạy đến khi nào giả sử không có case nào đúng phù hợp thì sẽ chạy đến `default:`
+
+--> Lesson 5 - Vòng lặp
+
+- += là gán cộng
