@@ -38,3 +38,18 @@ const soLe = nhieuSo1.filter((so1) => so1 % 2 !== 0);
 console.log(soChan);
 console.log(soLe);
 // done lọc số chẵn và số lẻ
+// Lọc sinh viên trên 22 tuổi
+const nhieuSinhVien1 = [
+  { ten: "Đức", tuoi: 22 },
+  { ten: "Dương", tuoi: 21 },
+  { ten: "Anh", tuoi: 23 },
+  { ten: "Hà", tuoi: 24 },
+  { ten: "Hùng", tuoi: 20 },
+  { ten: "Hải", tuoi: 25 },
+  { ten: "Hà", tuoi: 26 },
+];
+const sinhVienTren22Tuoi = nhieuSinhVien1.filter(
+  (sinhVien) => sinhVien.tuoi > 22
+);
+console.log(sinhVienTren22Tuoi);
+// done lọc sinh viên trên 22 tuổi

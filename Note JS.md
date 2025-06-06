@@ -62,17 +62,32 @@ person2.sayHi();`
 });`
   kết quả sẽ in ra là 7 + 3 = 10, callback(10) chính là gọi (kq), hàm callback chính là đoạn `(kq) => { }`
 
---> Lesson 3 -
+--> Lesson 3 - Array Method (map, filter)
 
 - .map() là một hàm dùng để duyệt qua từng phần tử của mảng
 - Nó tạo ra một mảng mới từ kết quả của mỗi lần duyệt
 - K làm thay đổi mảng ban đầu
-<!-- - Cấu trúc cơ bản:
-    array.map(function(phầnTử, chỉSố, mảngGốc) { ... })
-- Dùng khi bạn muốn "biến đổi" từng phần tử trong mảng thành một giá trị mới -->
+- Cấu trúc cơ bản:
+  `array.map(function(phầnTử, chỉSố, mảngGốc) { ... })`
+- Dùng khi muốn thay đổi từng phần tử trong mảng thành một value mới
 - Dùng return để trả về giá trị mới cho từng phần tử
 - `map();` có thể dùng arrow function, duyệt đc mảng object, nhân đôi mảng mỗi phần tử
 - filter() sử dụng để duyệt qua mảng và giữ lại các phần tử đúng điều kiện
 - number % 2 === 0 Kiểm tra số đó có chia hết cho 2 thì sẽ là số chẵn
 - => Cách viết hàm ngắn gọn (arrow function)
   ví dụ `const soLe = nhieuSo1.filter((so1) => so1 % 2 !== 0);`
+- includes() dùng để kiểm tra xem một chuỗi (string) hoặc mảng (array) có chứa một phần tử nào đó hay k
+
+--> Lesson 4 - Câu điều kiện (If / Else, Switch)
+
+- if (câu điều kiện đơn) sẽ kiểm tra điều kiện cụ thể thì `if (tuoi < 18)` thì có nghĩa là nếu như tuổi nhỏ hơn 18, nếu như đúng (true) thì sẽ chạy đến {}, nếu như khai báo biến không trong phạm vi của điều kiện thì sẽ không `console.log();` được
+- if-else (câu điều kiện 2 nhánh) có nghĩa là nếu như câu điều kiện if mà sai (false) thì sẽ chạy đến else giả sử
+  `let time = 9;
+if (time > 8) {
+  console.log("Bạn đã check-in muộn rồi");
+} else {
+  console.log("Bạn đã check-in đúng giờ");
+}`
+  => khai báo biến time = 9, câu if đầu tiên là set time > 8, mà 9 thì hiển nhiên lớn hơn 8 nên câu điều kiện sẽ chạy đến hết câu if là xong, nghĩa là check-in muộn, còn ngược lại giả sử set time = 7, câu if đầu tiên set time > 8, thì 7 chắc chắn sẽ nhỏ hơn 8 nên khi chạy hết câu điều kiện if đầu tiên báo sai (false) thì chương trình sẽ chạy xuống else (ở đây else k có condition gì có nghĩa là tất cả các trường hợp còn lại miễn là > 8 thì sẽ là check-in đúng giờ)
+- if-else if-else (câu điều kiện đa nhánh) kiểm tra được nhiều condition, chương trình sẽ dừng tại nhánh đúng đầu tiên, các nhánh sau sẽ bị bỏ qua
+  => - if là câu điều kiện đơn, - if-else là câu điều kiện 2 nhánh, if-else if-else là câu điều kiện đa nhánh
