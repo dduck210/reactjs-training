@@ -62,3 +62,9 @@ console.log(sinhVienTren22Tuoi);
 console.log(thongTinSinhVien);
 
 // done lọc sinh viên trên 22 tuổi
+
+// arrow function tính diện tích
+const arrDienTich = arrBanKinh.map(() => {
+  (banKinh) => Math.floor(Math.PI * banKinh * 2);
+});
+console.log(arrDienTich);

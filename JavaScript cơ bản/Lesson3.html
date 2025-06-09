@@ -6,6 +6,31 @@
     <title>Lesson 3 - Array Method (map, filter)</title>
   </head>
   <body>
+    <p><input type="number" id="ageToCheck" value="31" /></p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      const ages = [32, 33, 12, 40];
+
+      function checkAge(age) {
+        return age > document.getElementById("ageToCheck").value;
+      }
+
+      function age(age) {
+        return age + 10;
+      }
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML = ages.filter(checkAge);
+      }
+
+      function myFunction1() {
+        document.getElementById("demo").innerHTML = ages.map(age);
+      }
+    </script>
     <script src="Lesson3.js"></script>
   </body>
 </html>

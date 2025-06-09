@@ -89,3 +89,41 @@ if (x < 0) {
 } else {
   log("x là số thập phân");
 }
+
+// switch case bài tập
+let bangCap = "C";
+let ketQua;
+switch (ketQua) {
+  case "A":
+    bangCap = "được bằng A (Excellent)";
+    break;
+  case "B":
+    bangCap = "được bằng B (Good)";
+    break;
+  case "C":
+    bangCap = "được bằng C (Bình thường thôi)";
+    break;
+  case "D":
+    bangCap = "được bằng D Kém rồi";
+    break;
+  default:
+    break;
+}
+console.log("Được bằng", bangCap);
+
+var text;
+var favDrink = "Bạn muốn uống nước gì";
+switch (favDrink) {
+  case "Pepsi":
+    text = "Tạm đc";
+    break;
+  case "Coca":
+    text = "Bình thường";
+    break;
+  case "Fanta":
+    text = "Rất ngon";
+    break;
+  default:
+    text = "Còn loại nào khác nx k ?";
+}
+console.log(text);

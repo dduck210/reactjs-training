@@ -72,10 +72,10 @@ person2.sayHi();`
 - Dùng khi muốn thay đổi từng phần tử trong mảng thành một value mới
 - Dùng return để trả về giá trị mới cho từng phần tử
 - `map();` có thể dùng arrow function, duyệt đc mảng object, nhân đôi mảng mỗi phần tử
-- filter() sử dụng để duyệt qua mảng và giữ lại các phần tử đúng điều kiện
+- filter() sử dụng để duyệt qua mảng và giữ lại các phần tử đúng điều kiện, k thực hiện chức năng cho các phần tử rỗng, k thay đổi array ban đầu
 - number % 2 === 0 Kiểm tra số đó có chia hết cho 2 thì sẽ là số chẵn
 - => Cách viết hàm ngắn gọn (arrow function)
-  ví dụ `const soLe = nhieuSo1.filter((so1) => so1 % 2 !== 0);`
+  ví dụ `const soLe = nhieuSo1.filter((so1) => so1 % 2 !== 0);` -> !== là k bằng value
 - includes() dùng để kiểm tra xem một chuỗi (string) hoặc mảng (array) có chứa một phần tử nào đó hay k
 
 --> Lesson 4 - Câu điều kiện (If / Else, Switch)
@@ -92,7 +92,25 @@ if (time > 8) {
 - if-else if-else (câu điều kiện đa nhánh) kiểm tra được nhiều condition, chương trình sẽ dừng tại nhánh đúng đầu tiên, các nhánh sau sẽ bị bỏ qua
   => - if là câu điều kiện đơn, - if-else là câu điều kiện 2 nhánh, if-else if-else là câu điều kiện đa nhánh
 - switch case sẽ chạy từ case đầu tiên đến case cuối cùng, mỗi case sẽ có 1 `break` và cứ chạy đến khi nào giả sử không có case nào đúng phù hợp thì sẽ chạy đến `default:`
+- lệnh switch case sử dụng so sánh bằng nghiêm ngặt ===, là các value bắt buộc phải có cùng kiểu dữ liệu
 
---> Lesson 5 - Vòng lặp
+--> Lesson 5 - Vòng lặp for/foreach
 
+- `for (let i = 0; i < 10; i++) {}` , let i = 0: khởi tạo biến cho vòng lặp, i < 10: điều kiện để vòng lặp thực hiện i < 10, i++: tăng giá trị lên 1 đơn vị mỗi khi bắt đầu chạy vòng for, nếu giả sử đã gán giá trị cho i rồi thì khi viết cú pháp sẽ có thể bỏ qua đc khi khai báo biến i trong vòng for
+  `var i = 2;`
+  `for (; i < 10; i++) {}`
+- cx có thể bỏ trống value thứ 2, nếu value thứ 2 trả về value true thì vòng lặp sẽ tiếp tục chạy, case là false thì vòng lặp sẽ dừng lại break
+  `for (let i = 2; ; i++) {
+console.log(i);
+if (i === 5) break;`
+  }
+- Nếu như để value thứ 3 là rỗng như này
+  `for (let i = 2; ; i++) {
+console.log(i);
+if (i === 5) break;} thì bắt buộc phải có `break` k thì vòng lặp for sẽ bị chạy vô hạn
 - += là gán cộng
+- Vòng lặp for giúp lặp qua 1 khối mã đó nhiều lần
+- forEach() đc use để gọi 1 hàm cho mỗi phần tử của 1 mảng, vs các phần tử rỗng thì k thể thực hiện đc
+- Khi khai báo mảng xong nếu muốn lấy ra từng phần tử trong mảng giả sử có 1 mảng như này
+  `fruits = ["apple", "orange", "cherry"]`
+  muốn lấy ra orange thì chỉ cần console.log() sau đó truyền vị trí của quả orange ở trong mảng, như trên là orange đang ở vị trí số 1, sẽ đc viết theo syntax là `console.log(fruits[1]);`, còn với vòng lặp foreach thì sẽ tạo 1 function truyền vào 1 tham số bất kì ví dụ item `fruits.forEach(function(item){})` bên trong sẽ viết là nếu như gán cho item bằng vs apple để tìm tất cả các quả có chữ `apple` ở trong mảng đã create từ trước, sau đấy thì console.log() ra rồi gọi lại thằng item là sẽ oke, cũng có thể sử dụng thêm cách nữa là gọi mảng
