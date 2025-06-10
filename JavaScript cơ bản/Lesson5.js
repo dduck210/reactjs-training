@@ -20,6 +20,17 @@ for (let i = 2; ; i++) {
   if (i === 5) break;
 }
 
+const numbers1 = [1, 2, 3, 4, 5];
+numbers1.forEach((number) => {
+  // break; k sử dụng đc break
+});
+for (let i = 0; i < numbers1.length; i++) {
+  if (numbers1[i] === 3) {
+    break;
+  }
+  console.log(numbers1[i]);
+}
+
 var students = [
   {
     name: "Đức",
@@ -59,10 +70,10 @@ console.log(fruits);
 fruits.forEach(myFunction);
 
 fruits.forEach(function (item) {
-  // console.log(item, index, arr);
-  if (item === "apple") {
-    console.log(item);
-  }
+  console.log(item);
+  // if (item === "apple") {
+  //   console.log(item);
+  // }
 });
 
 // let sum = 0;
