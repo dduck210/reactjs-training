@@ -5,7 +5,7 @@
 - `package.json` đc sử dụng để quản lý các phụ thuộc đã đc downloads về, trong này sẽ chứa tất cả các công cụ để build project
 - `node_modules` là nơi tất cả các phụ thuộc đc cài đặt
 
---> Lesson 2: Component
+--> Lesson 2 + 3: Component, Props, State
 
 - Function component dạng component đc viết dưới dạng function, có thể viết nhiều function trong 1 file .js hoặc viết riêng mỗi component 1 file .js cx đc, trong mỗi function component cần có return trả về html, sau đó gọi component trong App.js theo syntax là ví dụ `<Lesson2 />`, khi sử dụng component thì phải import, sử dụng Ctrl + Space để import component
 - Class component yêu cầu thành phần phải bao gồm extends React.Component câu lệnh, câu đó tạo ra sự kế thừa cho React.Component và cấp quyền truy cập vào các hàm trong React.Component
@@ -30,3 +30,18 @@
   );
   };
   đây là cách hiển thị dữ liệu qua props, sau khi viết xong sẽ gọi component NameCard ra kèm classname vs id
+- Để sử dụng đc useState trước hết phải import thư viện cho nó ms active đc `import { useState } from "react";`
+- `const [count, setCount] = useState(0);` đây là cách khai báo 1 hàm useState, hàm count đc khởi tạo giá trị bắt đầu từ 0, hàm setCount để cập nhật hàm đó sau khi thay đổi
+- Như đã nói ở trên thì hàm setCount để cập nhật lại giá trị của hàm count khởi tạo từ đầu start từ 0, trong đoạn này:
+  `const hamTang = () => {
+    setCount(count + 1);
+};`
+  thì hàm setCount đc set bên trong là count tăng thêm 1, ở dưới thì:
+  `return (
+    <div>
+      <h1>Count: {count}</h1>
+      <button onClick={hamTang}>Click tăng</button>
+    </div>
+  );`
+  return button Click tăng start từ 0 mỗi lần click sẽ tăng lên 1, có nghĩa là hàm setCount đang thực hiện task update lại cái value của count luôn
+- Trong này `const [count, setCount] = useState(0);` biến count chính là biến lưu trữ giá trị hiện tại là bao nhiêu phụ thuộc vào useState đang set biến khởi tạo bắt đầu chạy từ 0 thì count sẽ memorize lại, nma sẽ có 1 điều là biến count sẽ change value khi mà biến setCount bắt đầu run, giá sử `setCount(count + 1);` hoặc `setCount(count - 1);` hàm onClick sẽ thực hiện việc cursor của user và biến giá trị value lưu trữ của count lúc đầu sẽ biến mất
