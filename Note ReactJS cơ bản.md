@@ -12,3 +12,21 @@
 - Sự khác biệt giữa Function Component vs Class Component là như Function thì sau khi viết hàm xong chỉ cần return để trả về HTML, nhưng mà Class Component thì cần phải extends React.Component để tạo kế thừa và quyền truy cập vào hàm React.Component, bên trong viết thêm hàm render() để xác định phần HTML cần phải show ra
 - Trường hợp viết mỗi component 1 file .js riêng thì ở đều phải khai báo hàm ở đầu đầy đủ và ở cuối cùng dòng sẽ phải có `export default tên hàm`
 - Trường hợp muốn hiển thị title dạng chuỗi hoặc số render ra web thì khi return thêm cú pháp {}
+- Props sử dụng để truyền dữ liệu từ component cha xuống component con, và nó là 1 object k thể thay đổi đc trong component con
+- Bên App.js là component cha, sẽ khởi tạo 1 product array ở dưới sẽ sử dụng ham map() để lặp qua từng sản phẩm ở trang product array đã khai báo
+- Bên ProductCard.js sẽ nhận props từ component cha để hiển thị chi tiết từng cốc trà sữa đã khai báo trong mảng
+- Truyền props là string, number và cả ảnh, map() để render list component trên browser
+- Khi truyền props sử dụng dấu {} nếu k sẽ bị sai cú pháp, truyền chuỗi thì phải có dấu "" giả sử `<NameCard className="name-card" id="alice" />`, còn nếu là số thì sẽ sử dụng dấu `{}` giả sử `<Hello ten="Đức Dương" tuoi={22} />`
+- Cách tốt nhất để sử dụng key value là sử dụng 1 chuỗi chính xác nhất giữa cái mối liên quan ví dụ thường sẽ là sử dụng id từ data để làm key ví dụ như là `key={product.id}`
+- Dữ liệu tĩnh thì sẽ đc hiển thị như này function FunctionComponent() {
+  return <h1>Test thử function component</h1>;
+  }
+  đoạn này sẽ đc fix cứng trong code, k nhận props từ đâu cả
+- const NameCard = (props) => {
+  return (
+  <div className={props.className}>
+  <div id={props.id}>Name: Alice</div>
+  </div>
+  );
+  };
+  đây là cách hiển thị dữ liệu qua props, sau khi viết xong sẽ gọi component NameCard ra kèm classname vs id

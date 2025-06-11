@@ -1,9 +1,38 @@
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
-import Lesson2 from "./Lesson2";
+// import Lesson2 from "./Lesson 2/ListExpenses";
 import React from "react";
+// import ListExpenses from "./Lesson 2/ListExpenses";
+import Hello from "./components/Hello";
+import ProductCard from "./components/ProductCard";
 
 function App() {
+  const products = [
+    {
+      id: 1,
+      title: "Trà sữa matcha",
+      price: 25000,
+      image: "https://picsum.photos/200/300?random=1",
+    },
+    {
+      id: 2,
+      title: "Trà sữa cookie",
+      price: 45000,
+      image: "https://picsum.photos/200/300?random=2",
+    },
+    {
+      id: 3,
+      title: "Trà sữa chân trâu",
+      price: 10000,
+      image: "https://picsum.photos/200/300?random=3",
+    },
+    {
+      id: 4,
+      title: "Trà sữa linh tinh",
+      price: 14000,
+      image: "https://picsum.photos/200/300?random=4",
+    },
+  ];
   return (
     // <div className="App">
     //   <header className="App-header">
@@ -22,11 +51,24 @@ function App() {
     //   </header>
     // </div>
     <div>
-      <Lesson2 />
+      {/* <Lesson2 /> */}
       <FunctionComponent />
       <ClassComponent />
       <ShowStaticData />
-      {/* <ShowArrayData /> */}
+      <ShowArrayData />
+
+      {/* Test truyền props */}
+      <Hello ten="Dương Đức" tuoi={21} />
+      <Hello ten="Đức Dương" tuoi={22} />
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          image={product.image}
+          title={product.title}
+          price={product.price}
+        />
+      ))}
+      <NameCard className="name-card" id="alice" />
     </div>
   );
 }
@@ -54,21 +96,32 @@ function ShowStaticData() {
 }
 
 // Test hiển thị ra dữ liệu ở dạng mảng hoặc object
-// function ShowArrayData() {
-//   const products = [
-//     { id: 1, name: "Áo phông", price: 300000 },
-//     { id: 2, name: "Quần dài", price: 200000 },
-//   ];
-//   console.log(products);
-//   return (
-//     <div>
-//       {products.map((product) => {
-//         <div>
-//           id: {product.id}, name: {product.name}, price: {product.price}
-//         </div>;
-//       })}
-//     </div>
-//   );
-// }
+function ShowArrayData() {
+  const products = [
+    { id: 1, name: "Áo phông", price: 300000 },
+    { id: 2, name: "Quần dài", price: 200000 },
+  ];
+  console.log(products);
+  return (
+    <div>
+      {products.map((product) => (
+        <ProductCard
+          key={product.id}
+          image={product.image}
+          title={product.title}
+          price={product.price}
+        />
+      ))}
+    </div>
+  );
+}
+
+const NameCard = (props) => {
+  return (
+    <div className={props.className}>
+      <div id={props.id}>Name: Alice</div>
+    </div>
+  );
+};
 
 export default App;
