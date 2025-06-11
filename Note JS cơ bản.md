@@ -107,10 +107,24 @@ if (i === 5) break;`
 - Nếu như để value thứ 3 là rỗng như này
   `for (let i = 2; ; i++) {
 console.log(i);
-if (i === 5) break;} thì bắt buộc phải có `break` k thì vòng lặp for sẽ bị chạy vô hạn
+if (i === 5) break;} thì bắt buộc phải có `break` k thì vòng lặp for sẽ bị chạy vô hạn, như trong trường if kia thì biến i đc gán bằng 5 vòng for biến i đc set = 2, condition gán i = 5 nếu như k có break thì vòng lặp sẽ chạy mãi số nhảy lên và k stop, set break thì chương trình sẽ chỉ chạy từ 2 đến 5 là dừng
 - += là gán cộng
 - Vòng lặp for giúp lặp qua 1 khối mã đó nhiều lần
 - forEach() đc use để gọi 1 hàm cho mỗi phần tử của 1 mảng, vs các phần tử rỗng thì k thể thực hiện đc
 - Khi khai báo mảng xong nếu muốn lấy ra từng phần tử trong mảng giả sử có 1 mảng như này
   `fruits = ["apple", "orange", "cherry"]`
   muốn lấy ra orange thì chỉ cần console.log() sau đó truyền vị trí của quả orange ở trong mảng, như trên là orange đang ở vị trí số 1, sẽ đc viết theo syntax là `console.log(fruits[1]);`, còn với vòng lặp foreach thì sẽ tạo 1 function truyền vào 1 tham số bất kì ví dụ item `fruits.forEach(function(item){})` bên trong sẽ viết là nếu như gán cho item bằng vs apple để tìm tất cả các quả có chữ `apple` ở trong mảng đã create từ trước, sau đấy thì console.log() ra rồi gọi lại thằng item là sẽ oke, cũng có thể sử dụng thêm cách nữa là gọi mảng
+- Vòng foreach k thể dừng bằng return hay break như vòng for, mà nếu như muốn pause sớm thì phải sử dụng vòng for thay thế
+- Trong case này
+  `const numbers1 = [1, 2, 3, 4, 5];
+numbers1.forEach((number) => {
+  // break; k sử dụng đc break
+});
+for (let i = 0; i < numbers1.length; i++) {
+  if (numbers1[i] === 3) {
+    break;
+  }
+  console.log(numbers1[i]);
+}`
+  thì thấy đc là vòng for k thể sử dụng break để dừng vòng lặp đc lỗi k hợp lệ, mà phải sử dụng 1 vòng for thường để thay thế, như case kia thì set condition của biến i trong vòng for là = 0, biến i phải nhỏ hơn độ dài mảng của numbers1, condition nếu biến i khi chạy đến 3 thì sẽ dừng vòng lặp bằng break
+- Vòng foreach k chạy vô hạn, nó chỉ chạy 1 lần xong thôi, nếu đặt if có điều kiện, thì chạy đúng điều kiện xong cũng dừng luôn
