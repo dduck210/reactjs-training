@@ -103,3 +103,40 @@ console.log("Interval");
     });
 }, []);`
   trong đó cần lưu ý, dòng cuối cùng `}, []);` cần thêm [] có nghĩa là 1 mảng rỗng để tránh trường hợp api sẽ call liên tục k pause, mảng rỗng có ý nghĩa là sẽ chỉ call 1 lần xong sẽ k call nữa, `https://fakestoreapi.com/products` là link api fake, sau `fetch("")` trong ngoặc sẽ truyền link api
+- Compare [] rỗng vs [] truyền state đấy là khi truyền 1 [] rỗng vào, sau đó log ra chưa có truyền data gì cả, nên giả sử log là `console.log("[] rỗng chỉ chạy 1 lần");` thì system chỉ chạy duy nhất 1 lần và sẽ pause
+- Còn vs [] truyền state vào trong đó kiểu là `[name]` thì khi render 1 đoạn html input gì đó request user nhập name vào, thì mỗi khi nhập tên mới, đặt `console.log("Name mới: ", name);` thử thì show ra liên tục k phải 1 lần duy nhất mà là rất nhiều lần
+
+--> Lesson 5: Event & Form Handling
+
+- Trong đoạn này có 1 event là
+  `return (
+    <div>
+      <input
+        type="text"
+        placeholder="Nhập tên"
+        value={name}
+        onChange={(event) => setName(event.target.value)}
+      />
+      {/* <button className="btn btn-success">Submit</button> */}
+    </div>
+);`
+  `event.target.value` ở đây event là sự kiện đang diễn ra ở onChange xảy ra ở case input user sẽ nhập vào, còn `target.value` là thuộc tính giữ value hiện tại của user khi nhập vào, sau đấy thì `onChange` sẽ xử lí thằng `event`
+- `onClick` là trình handle event đc active khi user thực hiện action nhấp vào 1 phần tử nào đó giả sử là 1 `button`, `onClick` trong react khá giống vs trong html có trình handle event nma đc viết là `onclick`, nma trong react thì viết theo kiểu syntax camelCase có nghĩa là kiểu lạc đà, nên sẽ đc viết là `onClick`, khi nhấp vào 1 phần tử thì hàm sẽ bắt đầu đc thực hiện
+- `onSubmit` là trình handle event đc sử dụng trong việc gửi form, có thể sử dụng `useState` để lưu giữ các value, ngoài ra có thể use thêm `event.target` để access vào các phần tử của form khi form đc submit
+- Thẻ return 1 thẻ `a` mà trong biến handleClickLink
+  `const handleClickLink = (event) => {
+    event.preventDefault();
+    console.log("Link đúng");
+};`
+  thấy là thẻ a sử dụng để thêm link, nếu giả sử k thêm `event.preventDefault();` thì khi bấm vào phần đc gán link sẽ nhảy ra 1 page mới, nma khi thêm `event.preventDefault();` vào thì browser sẽ tự động chặn k cho nhảy link mới
+  <input type="text" defaultValue={inputValue} onChange={handleChange} />
+- Validate form sẽ sử dụng required trong thẻ input sẽ có syntax như sau giả sử:
+  `<input
+  type="email"
+  className="form-control"
+  id="InputEmail1"
+  placeholder="Vui lòng nhập vào email của bạn..."
+  required
+/>`
+
+  `required` sẽ validate khi ấn submit form sẽ yêu cầu user bắt buộc phải nhập vào k thì validate sẽ báo nhập thiếu trường
