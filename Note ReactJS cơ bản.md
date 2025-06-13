@@ -45,3 +45,61 @@
   );`
   return button Click tăng start từ 0 mỗi lần click sẽ tăng lên 1, có nghĩa là hàm setCount đang thực hiện task update lại cái value của count luôn
 - Trong này `const [count, setCount] = useState(0);` biến count chính là biến lưu trữ giá trị hiện tại là bao nhiêu phụ thuộc vào useState đang set biến khởi tạo bắt đầu chạy từ 0 thì count sẽ memorize lại, nma sẽ có 1 điều là biến count sẽ change value khi mà biến setCount bắt đầu run, giá sử `setCount(count + 1);` hoặc `setCount(count - 1);` hàm onClick sẽ thực hiện việc cursor của user và biến giá trị value lưu trữ của count lúc đầu sẽ biến mất
+
+--> Học CSS Bootstrap trong ReactJS
+
+- Muốn CSS Bootstrap trong ReactJS cần phải cài thư viện bằng cách mở terminal xong gõ lệnh `npm install react-bootstrap bootstrap`, sau đó import thư viện bootstrap vào file index.js dòng `import "bootstrap/dist/css/bootstrap.min.css";`, sau đó thêm link bootstrap ở file index.html `<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>`
+- Khác biệt so với việc sử dụng bootstrap ở html là code bằng thẻ class, nhưng ở trong react thì sẽ theo syntax là `className="attribute"`, viết class sẽ bị sai syntax của jsx k receive attribute css của boostrap, syntax sẽ là className + thuộc tính
+- Thuộc tính `btn btn-...` giả sử `btn btn-success` để chỉnh màu button màu xanh lá cây, xong `btn-...` giả sử `btn-sm` để chỉnh kích cữ của button là small
+- Đây là các thuộc tính chỉnh màu của button:
+  `<button type="button" class="btn">Basic</button> Button basic
+<button type="button" class="btn btn-primary">Primary</button> Button primary màu xanh dương đậm
+<button type="button" class="btn btn-secondary">Secondary</button> Button secondary màu xanh lá cây
+<button type="button" class="btn btn-success">Success</button> Button info màu xanh dương nhạt
+<button type="button" class="btn btn-info">Info</button> Button info màu xanh dương nhạt
+<button type="button" class="btn btn-warning">Warning</button> Button warning màu vàng
+<button type="button" class="btn btn-danger">Danger</button> Button danger màu đỏ
+<button type="button" class="btn btn-dark">Dark</button> Button dark màu đen
+<button type="button" class="btn btn-light">Light</button> Button light màu xám
+<button type="button" class="btn btn-link">Link</button>` Button link màu xám nhưng mà sẽ gạch chân bên dưới vì là link
+- Đây là các attribute chỉnh kích cỡ button:
+  `btn-lg`: là viết tắt của button-large (kích cỡ button to nhất)
+  `btn btn-primary`: thuộc tính default button k cần viết gì (kích thước default)
+  `btn-sm`: là viết tắt của button-small (kích cỡ button nhỏ nhất)
+- Giả sử muốn viết 1 cái button màu đỏ kích cỡ small chẳng hạn thì sẽ viết là `<button type="button" class="btn btn-danger btn-sm">Btn đỏ kích cỡ small</button>`
+
+--> Lesson 4: useEffect
+
+- useEffect sẽ đc sử dụng sau khi quá trình render của component xong, đc gọi ra và thực hiện nhiệm vụ
+- Hàm useEffect đc sử dụng để gọi data về để show ra, khi user chạy page thì sẽ auto update lại UI, giả sử như hàm setTimeout có tác dụng để thực thi 1 hàm thực thi bao nhiêu mili giây kể từ khi gọi nó ra setTimeout(), ví dụ như hàm này `useEffect(() => {
+setTimeout(() => {
+  setCount((count) => count - 1);
+}, 1000);`
+  ở đây setTimeout mỗi 1000 mili giây bằng 1s, time sẽ đếm ngược từ 0 trở xuống mỗi lần 1 giây, còn nếu là count + 1 thì time sẽ cộng lên mỗi lần 1 giây
+- `setTimeout(function () {
+  console.log("Timeout");
+  }, 1000);
+
+setInterval(function () {
+console.log("Interval");
+}, 1000);`
+ở trong ví dụ này thì setTimeout sẽ thực thi mã sau độ trễ là 1 giây, còn ở setInterval thì sẽ lặp lại sau mỗi 1 giây
+
+- Khi muốn dừng hàm setInterval thì sẽ sử dụng hàm clearInterval, trước hết phải gán setInterval cho 1 biến mới, giả sử `const timer = setInterval(() => {})` sau đó dùng mới sử dụng đc hàm `clearInterval(timer);` gọi timer ra
+- Trong 1 function component thì allow sử dụng useEffect để consolo.log() ra component có show đc hay k
+- fetch() để gọi api viết được trong useEffect, syntax là:
+  `useEffect(() => {
+  fetch("https://fakestoreapi.com/products")
+    .then((res) => res.json())
+    // .then((products) => setProduct(products));
+    .then((data) => {
+      console.log("Data api: ", data);
+      setProducts(data);
+    });
+}, []);`
+  trong đó cần lưu ý, dòng cuối cùng `}, []);` cần thêm [] có nghĩa là 1 mảng rỗng để tránh trường hợp api sẽ call liên tục k pause, mảng rỗng có ý nghĩa là sẽ chỉ call 1 lần xong sẽ k call nữa, `https://fakestoreapi.com/products` là link api fake, sau `fetch("")` trong ngoặc sẽ truyền link api
