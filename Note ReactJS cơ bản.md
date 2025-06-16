@@ -140,3 +140,18 @@ console.log("Interval");
 />`
 
   `required` sẽ validate khi ấn submit form sẽ yêu cầu user bắt buộc phải nhập vào k thì validate sẽ báo nhập thiếu trường
+
+- Giống ở bên JS thì `trim();` là 1 method đc use để xoá khoảng trắng đầu cuối của form input, khi handle input đầu vào, thường sẽ phải delete khoảng trắng đầu cuối để xử lí data, phần này thì thằng `onChange` sẽ handle event input thông qua `trim();`, sẽ có syntax là
+  `const handleInputChange = (event) => {
+  setInputValue(event.target.value.trim());
+};`
+  ở đây thì vẫn khai báo event onChange như bình thường, vẫn sẽ `event.target.value` để lưu giữ biến input truyền vào để cho onChange sẽ handle event, sau đấy thì truyền method trim() vào `setInputValue(event.target.value.trim());`, return bên browser sẽ trả về thanh input
+  `<input
+        type="text"
+        value={inputValue}
+        onChange={handleInputChange}
+        className="form-control"
+        id="exampleInputPassword1"
+      ></input>`
+  return onChange truyền vào biến handleInputChange, trên browser khi user nhập data, sẽ k thể sử dụng space để cách cả ở đầu và ở cuối
+- Muốn clear value input khi submit thì sẽ gọi biến `setInputValue` đã khai báo từ đầu ra sau đó truyền string rỗng vào syntax là `setInputValue("");` sẽ đc sử dụng trong 1 hàm event arrow function

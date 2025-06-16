@@ -3,17 +3,24 @@ import { useState } from "react";
 function InputForm() {
   const [inputValue, setInputValue] = useState("");
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setInputValue("");
+  };
+
   const handleChange = (event) => {
     setInputValue(event.target.value);
   };
 
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="mb-3">
         <label htmlFor="InputEmail1" className="form-label">
           Email address
         </label>
         <input
+          onChange={handleChange}
+          value={inputValue}
           type="email"
           className="form-control"
           id="InputEmail1"
@@ -26,6 +33,8 @@ function InputForm() {
           Password
         </label>
         <input
+          onChange={handleChange}
+          value={inputValue}
           type="password"
           className="form-control"
           id="InputPassword1"
