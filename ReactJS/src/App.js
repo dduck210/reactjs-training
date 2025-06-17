@@ -1,28 +1,38 @@
 // import logo from "./logo.svg";
+// import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import Home from "./components/Home";
+import About from "./components/About";
+import TestUseLocation from "./hooks/TestUseLocation";
+import Responsive from "./components/Responsive/Responsive";
+import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
+// import { Routes, Route, BrowserRouter } from "react-router";
+// import About from "./components/About";
+// import Home from "./components/Home";
+// import HomeButton from "./components/HomeButton";
 // import Lesson2 from "./Lesson 2/ListExpenses";
-import FunctionComponent from "./components/FunctionComponent";
-import ClassComponent from "./components/ClassComponent";
-import ShowStaticData from "./components/ShowStaticData";
-import ShowArrayData from "./components/ShowArrayData";
-import StudyUseEffect from "./hooks/useState & useEffect/StudyUseEffect";
-import TestUseEffect from "./hooks/useState & useEffect/TestUseEffect";
-import LogComponent from "./hooks/useState & useEffect/LogComponent";
-import HamCount from "./hooks/useState & useEffect/HamCount";
-import MessageProps from "./hooks/useState & useEffect/MessageProps";
-import TestCSS from "./components/TestCSS";
-import ProductList from "./components/ProductList";
-import Timer from "./components/Timer";
-import CompareNullVsState from "./hooks/useState & useEffect/CompareNullVsState";
-import OnClick from "./components/Lesson 5/OnClick";
-import OnSubmit from "./components/Lesson 5/OnSubmit";
-import AccessDataToForm from "./components/Lesson 5/AccessDataToForm";
-import BuildForm from "./components/Lesson 5/InputForm";
-import InputForm from "./components/Lesson 5/InputForm";
-import TextariaForm from "./components/Lesson 5/TextariaForm";
-import TestTrimInput from "./components/Lesson 5/TestTrimInput";
-import ClearFormInput from "./components/Lesson 5/ClearFormInput";
-
+// import FunctionComponent from "./components/FunctionComponent";
+// import ClassComponent from "./components/ClassComponent";
+// import ShowStaticData from "./components/ShowStaticData";
+// import ShowArrayData from "./components/ShowArrayData";
+// import StudyUseEffect from "./hooks/useState & useEffect/StudyUseEffect";
+// import TestUseEffect from "./hooks/useState & useEffect/TestUseEffect";
+// import LogComponent from "./hooks/useState & useEffect/LogComponent";
+// import HamCount from "./hooks/useState & useEffect/HamCount";
+// import MessageProps from "./hooks/useState & useEffect/MessageProps";
+// import TestCSS from "./components/TestCSS";
+// import ProductList from "./components/ProductList";
+// import Timer from "./components/Timer";
+// import CompareNullVsState from "./hooks/useState & useEffect/CompareNullVsState";
+// import OnClick from "./components/Lesson 5/OnClick";
+// import OnSubmit from "./components/Lesson 5/OnSubmit";
+// import AccessDataToForm from "./components/Lesson 5/AccessDataToForm";
+// import BuildForm from "./components/Lesson 5/InputForm";
+// import InputForm from "./components/Lesson 5/InputForm";
+// import TextariaForm from "./components/Lesson 5/TextariaForm";
+// import TestTrimInput from "./components/Lesson 5/TestTrimInput";
+// import ClearFormInput from "./components/Lesson 5/ClearFormInput";
 function App() {
   // const products = [
   //   {
@@ -50,6 +60,7 @@ function App() {
   //     image: "https://picsum.photos/200/300?random=4",
   //   },
   // ];
+
   return (
     <div>
       {/* <FunctionComponent />
@@ -79,13 +90,22 @@ function App() {
       <ProductList />
       <Timer />
       <CompareNullVsState /> */}
-      <OnClick />
+      {/* <OnClick /> */}
       {/* <OnSubmit /> */}
-      <AccessDataToForm />
+      {/* <AccessDataToForm />
       <InputForm />
       <TextariaForm />
       <TestTrimInput />
-      <ClearFormInput />
+      <ClearFormInput /> */}
+      {/* <HomeButton /> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </BrowserRouter>
+      <Responsive />
+      <HoverFocusActice />
     </div>
   );
 }

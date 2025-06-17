@@ -1,0 +1,53 @@
+--> Lesson 1: TailwindCSS Setup
+
+- Đầu tiên cần phải create project bằng lệnh
+  npx create-react-app my-project
+  cd my-project
+- Sau đó install tailwindcss bằng lệnh
+  npm install -D tailwindcss@3
+  npx tailwindcss init
+- Sửa lại file `tailwind.config.js`
+  /** @type {import('tailwindcss').Config} \*/
+  module.exports = {
+  content: [
+  "./src/**/\*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+  extend: {},
+  },
+  plugins: [],
+  }
+- Thêm đoạn này vào trong file index.css
+  @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+- Sau đó chạy project bằng câu lệnh
+  npm run start
+
+--> Lesson 2+3: Dựng UI bằng class, Responsive, Hover, State
+
+- Các attribute style cơ bản trong tailwindcss:
+
+* bg-blue-500: bg là background, chỉnh nền màu xanh dương
+* hover:bg-blue-700: chỉnh hover vào button chuyển xanh dương
+* text-white: chỉnh chữ màu trắng
+* font-bold: chữ in đậm
+* py-2: viết tắt của padding-top với padding-bottom khoảng trên khoảng dưới
+* px-4: viết tắt của padding-left với padding-right khoảng trái khoảng phải
+* rounded: viết tắt của border-radius bo viền
+* gap: khoảng cách giữa các hàng và cột trong bố cục lưới và flexbox
+* mb: margin-bottom
+* p: khoảng padding
+* border: chỉnh đồ dày mỏng của viền
+* shadow: đổ bóng khung viền
+* text-center: căn giữa chữ
+* text-lg: cỡ chữ lớn (lg) là large
+
+- Test tab console trên F12, thấy display trên điện thoại chữ nhỏ hơn, button màu xanh. Còn trên máy tính bảng kích thước >= 768px thì chữ to hơn, button màu xanh lá. Trên laptop kích thước >= 1024px thì chữ to hơn nữa, button màu đỏ. Trên màn hình lớn >=1280px thì chữ to nhất, nút màu tím
+- class `md:` use khi screen >= 768px kích thước tablet
+- class `lg:` use khi screen >= 1024px kích thước laptop
+- class `xl:` use khi screen >= 1280px kích thước screen lớn
+- class `2xl:` use khi screen >= 1536px kích thước screen siêu lớn
+- `hover` có ý nghĩa là khi di chuột vào phần tử sẽ làm thay đổi màu sắc hoặc kích thước tuỳ theo css giả sử `hover:bg-blue-700` có nghĩa là button sẽ chuyển sang màu xanh dương khi di chuột vào
+- `focus` đc use nhiều trong input button, kiểu khi elements đc focus vào thì con trỏ sẽ đứng im k nhấp nháy nữa
+- `active` đc use khi nhấn giữ chuột vào phần tử thì sẽ thu nhỏ elements giả sử như này `active:scale-95` là giảm còn 95%
