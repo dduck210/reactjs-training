@@ -5,13 +5,13 @@ function AccessDataToForm() {
   const [name, setName] = useState("");
 
   const handleSubmit = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     console.log("Name:", name);
   };
   return (
     <form onSubmit={handleSubmit}>
       <input
-        className="form-control-sm mt-5 mb-3"
+        className="text-3xl font-bold underlineborder-collapse border border-gray-400"
         type="text"
         value={name}
         onChange={(event) => setName(event.target.value)}

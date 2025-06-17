@@ -20,6 +20,8 @@ import AccessDataToForm from "./components/Lesson 5/AccessDataToForm";
 import BuildForm from "./components/Lesson 5/InputForm";
 import InputForm from "./components/Lesson 5/InputForm";
 import TextariaForm from "./components/Lesson 5/TextariaForm";
+import TestTrimInput from "./components/Lesson 5/TestTrimInput";
+import ClearFormInput from "./components/Lesson 5/ClearFormInput";
 
 function App() {
   // const products = [
@@ -79,9 +81,11 @@ function App() {
       <CompareNullVsState /> */}
       <OnClick />
       {/* <OnSubmit /> */}
-      {/* <AccessDataToForm /> */}
+      <AccessDataToForm />
       <InputForm />
       <TextariaForm />
+      <TestTrimInput />
+      <ClearFormInput />
     </div>
   );
 }
