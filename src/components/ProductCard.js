@@ -1,4 +1,4 @@
-export default function ProductCard({ image, title, price }) {
+function ProductCard({ image, title, price }) {
   return (
     <div>
       <img src={image} alt={title} />
@@ -7,4 +7,4 @@ export default function ProductCard({ image, title, price }) {
   );
 }
 
-// export default ProductCard;
+export default ProductCard;
