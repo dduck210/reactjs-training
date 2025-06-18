@@ -155,3 +155,10 @@ console.log("Interval");
       ></input>`
   return onChange truyền vào biến handleInputChange, trên browser khi user nhập data, sẽ k thể sử dụng space để cách cả ở đầu và ở cuối
 - Muốn clear value input khi submit thì sẽ gọi biến `setInputValue` đã khai báo từ đầu ra sau đó truyền string rỗng vào syntax là `setInputValue("");` sẽ đc sử dụng trong 1 hàm event arrow function
+
+--> Extends React (Router)
+
+- `useNavigate();` là 1 hook sử dụng để chuyển page khi đang ở trong 1 component
+- `navigate("/about");` đc use để để page change sang page about, na ná với thẻ link bên html
+- `Routes` và `Route` đc use để định nghĩa các page trong app react, trong đó `Routes` có trách nhiệm sẽ giúp làm khớp các URL đã identify, còn mỗi `Route` sẽ là 1 URL và 1 element riêng để show các thông tin của component đó
+- `BrowserRouter` đc use để cho phép người dùng điều hướng giữa các tuyến đường khác nhau thông qua các liên kết và tương tác khác
