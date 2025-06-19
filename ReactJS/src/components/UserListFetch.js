@@ -3,11 +3,10 @@ import { useEffect, useState } from "react";
 function UserListFetch() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("https://api.escuelajs.co/api/v1/products")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
-        console.log("Nhận data từ API", data);
       })
       .catch((err) => console.log("Lỗi", err));
   }, []);
@@ -40,22 +39,37 @@ function UserListFetch() {
               {user.title}
             </h3>
             <p className="text-gray-600 mb-1">
-              <span className="font-medium">Price:</span> {user.price}
+              <span className="font-medium">Slug: </span> {user.slug}
             </p>
             <p className="text-gray-600 mb-1">
-              <span className="font-medium">Description:</span>
+              <span className="font-medium">Price: </span>
+              {user.price}
+            </p>
+            <p className="text-gray-600 mb-1">
+              <span className="font-medium">Description: </span>
               {user.description}
             </p>
             <p className="text-gray-600 mb-1">
-              <span className="font-medium">Category:</span> {user.category}
+              <span className="font-medium">Category: </span>
+              {user.category.name}, {user.category.slug},{" "}
+              {user.category?.image[2]}, {user.category?.creationAt},{" "}
+              {user.category?.updatedAt}
             </p>
             <p className="text-gray-600 mb-1">
-              <span className="font-medium">Image:</span>
+              <span className="font-medium">Image: </span>
               <img
-                src={user.image}
+                src={user.images?.[1]}
                 alt={user.title}
                 className="w-full h-auto"
               />
+            </p>
+            <p className="text-gray-600 mb-1">
+              <span className="font-medium">CreationAt: </span>
+              {user.creationAt}
+            </p>
+            <p className="text-gray-600 mb-1">
+              <span className="font-medium">UpdatedAt: </span>
+              {user.updatedAt}
             </p>
           </div>
         ))}

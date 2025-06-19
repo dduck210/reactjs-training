@@ -5,6 +5,8 @@ import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import UserListFetch from "./components/UserListFetch";
+import UserListAxios from "./components/UserListAxios";
+import ProductDisplay from "./components/ProductDisplay";
 // import TestUseLocation from "./hooks/TestUseLocation";
 // import Responsive from "./components/Responsive/Responsive";
 // import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
@@ -104,6 +106,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/test-fetch" element={<UserListFetch />} />
+          <Route path="/test-axios" element={<UserListAxios />} />
+          <Route path="/test-async-await" element={<ProductDisplay />} />
         </Routes>
       </BrowserRouter>
       {/* <Responsive />

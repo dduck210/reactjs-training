@@ -6,7 +6,10 @@ function UserListAxios() {
     axios
       .get("https://fakestoreapi.com/products")
       .then((res) => {
+        console.log("Nhận data", res);
+
         setUsers(res.data);
+        console.log(res.data[0]);
       })
       .catch((err) => console.log("Lỗi", err));
   }, []);
