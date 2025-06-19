@@ -7,11 +7,11 @@ function UserListFetch() {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then((res) => {
         res.json();
-        console.log(res);
+        console.log("Đã nhận res", res);
       })
       .then((data) => {
         setUsers(data);
-        console.log("Nhận data thành công", data);
+        console.log("Đã nhận data", data);
       })
       .catch((err) => console.log("Lỗi", err));
   }, []);
