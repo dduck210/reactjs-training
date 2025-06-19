@@ -4,9 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
-import TestUseLocation from "./hooks/TestUseLocation";
-import Responsive from "./components/Responsive/Responsive";
-import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
+import UserListFetch from "./components/UserListFetch";
+// import TestUseLocation from "./hooks/TestUseLocation";
+// import Responsive from "./components/Responsive/Responsive";
+// import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
 // import { Routes, Route, BrowserRouter } from "react-router";
 // import About from "./components/About";
 // import Home from "./components/Home";
@@ -102,10 +103,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/test-fetch" element={<UserListFetch />} />
         </Routes>
       </BrowserRouter>
-      <Responsive />
-      <HoverFocusActice />
+      {/* <Responsive />
+      <HoverFocusActice /> */}
     </div>
   );
 }

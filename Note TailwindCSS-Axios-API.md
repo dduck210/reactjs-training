@@ -51,3 +51,8 @@
 - `hover` có ý nghĩa là khi di chuột vào phần tử sẽ làm thay đổi màu sắc hoặc kích thước tuỳ theo css giả sử `hover:bg-blue-700` có nghĩa là button sẽ chuyển sang màu xanh dương khi di chuột vào
 - `focus` đc use nhiều trong input button, kiểu khi elements đc focus vào thì con trỏ sẽ đứng im k nhấp nháy nữa
 - `active` đc use khi nhấn giữ chuột vào phần tử thì sẽ thu nhỏ elements giả sử như này `active:scale-95` là giảm còn 95%
+
+--> Lesson 4: TailwindCSS + Axios & API
+
+- Promise là 1 object đại diện cho 1 tác vụ bất đồng bộ có thể hoàn thành trong tương lai. Là 1 lời hứa sẽ trả result khi task hoàn thành
+- Phải dùng .then() vì thằng promise nó sẽ k return về value ngay lập tức, khi sử dụng fetch() truyền link api vào nó sẽ return về 1 promise, thì thằng .then() nó đc use để chờ data và handle sau khi thằng promise hoàn thành
