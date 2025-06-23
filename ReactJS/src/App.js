@@ -5,8 +5,8 @@ import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
 import TestUseLocation from "./hooks/TestUseLocation";
-import Responsive from "./components/Responsive/Responsive";
-import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
+// import Responsive from "./components/Responsive/Responsive";
+// import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
 import UserListFetch from "./components/UserListFetch";
 import UserListAxios from "./components/UserListAxios";
 // import { Routes, Route, BrowserRouter } from "react-router";
@@ -35,6 +35,9 @@ import UserListAxios from "./components/UserListAxios";
 // import TextariaForm from "./components/Lesson 5/TextariaForm";
 // import TestTrimInput from "./components/Lesson 5/TestTrimInput";
 // import ClearFormInput from "./components/Lesson 5/ClearFormInput";
+import UserList from "./components/UserList";
+// import LinearColor from "./components/Loading/TestNewLoading";
+
 function App() {
   // const products = [
   //   {
@@ -107,10 +110,12 @@ function App() {
           <Route path="/test-fetch" element={<UserListFetch />} />
           <Route path="/test-use-location" element={<TestUseLocation />} />
           <Route path="/test-axios" element={<UserListAxios />} />
+          <Route path="/test-loading" element={<UserList />} />
+          {/* <Route path="/test-newloading" element={<LinearColor />} /> */}
         </Routes>
       </BrowserRouter>
-      <Responsive />
-      <HoverFocusActice />
+      {/* <Responsive />
+      <HoverFocusActice /> */}
     </div>
   );
 }
