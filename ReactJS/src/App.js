@@ -7,6 +7,8 @@ import About from "./components/About";
 import TestUseLocation from "./hooks/TestUseLocation";
 import Responsive from "./components/Responsive/Responsive";
 import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
+import UserListFetch from "./components/UserListFetch";
+import UserListAxios from "./components/UserListAxios";
 // import { Routes, Route, BrowserRouter } from "react-router";
 // import About from "./components/About";
 // import Home from "./components/Home";
@@ -102,6 +104,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/test-fetch" element={<UserListFetch />} />
+          <Route path="/test-use-location" element={<TestUseLocation />} />
+          <Route path="/test-axios" element={<UserListAxios />} />
         </Routes>
       </BrowserRouter>
       <Responsive />
