@@ -11,7 +11,7 @@ function UserList() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch("https://fakestoreapi.com/productss");
+        const res = await fetch("https://fakestoreapi.com/products");
         if (!res.ok) throw new Error("Lỗi API nên k thể call đc");
 
         const data = await res.json();
@@ -32,7 +32,7 @@ function UserList() {
 
   if (loading) {
     return (
-      <div className="w-full h-screen flex flex-col items-center justify-center text-red-500 text-lg font-medium mb-4">
+      <div className="w-full h-screen flex flex-col items-center justify-center text-red-500 text-lg font-medium mb-4 bg-black/30">
         Đang tải dữ liệu... <LinearColor />
       </div>
     );
