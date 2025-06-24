@@ -4,12 +4,16 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
 import About from "./components/About";
+// import TestUseLocation from "./hooks/TestUseLocation";
+// import Responsive from "./components/Responsive/Responsive";
+// import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
 import UserListFetch from "./components/UserListFetch";
 import UserListAxios from "./components/UserListAxios";
 import ProductDisplay from "./components/ProductDisplay";
 // import TestUseLocation from "./hooks/TestUseLocation";
 // import Responsive from "./components/Responsive/Responsive";
 // import HoverFocusActice from "./components/Interactive Effect/HoverFocusActive";
+
 // import { Routes, Route, BrowserRouter } from "react-router";
 // import About from "./components/About";
 // import Home from "./components/Home";
@@ -36,6 +40,8 @@ import ProductDisplay from "./components/ProductDisplay";
 // import TextariaForm from "./components/Lesson 5/TextariaForm";
 // import TestTrimInput from "./components/Lesson 5/TestTrimInput";
 // import ClearFormInput from "./components/Lesson 5/ClearFormInput";
+// import UserList from "./components/UserList";
+// import LinearColor from "./components/Loading/TestNewLoading";
 function App() {
   // const products = [
   //   {
